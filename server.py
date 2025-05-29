@@ -66,17 +66,6 @@ def text_to_speech():
     return send_file(io.BytesIO(audio.content), mimetype='audio/wav')
 
 # Endpoint 4: Db2 Courses
-# @app.route('/courses', methods=['GET'])
-# def get_courses():
-#     query = "SELECT NAME, DESCRIPTION FROM COURSES"
-#     stmt = ibm_db.exec_immediate(conn, query)
-#     result = []
-#     row = ibm_db.fetch_assoc(stmt)
-#     while row:
-#         result.append({'name': row['NAME'], 'description': row['DESCRIPTION']})
-#         row = ibm_db.fetch_assoc(stmt)
-#     return jsonify(result)
-
 @app.route('/courses', methods=['GET'])
 def get_courses():
     try:
