@@ -6,3 +6,4 @@ Flask
 ibm-watson 
 python-dotenv 
 Flask-Cors
+ibpm_db
